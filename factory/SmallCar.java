@@ -1,18 +1,14 @@
 public class SmallCar extends Car{
     public SmallCar(String make, String model) {
         super(make, model);
-        //TODO Auto-generated constructor stub
     }
 
     protected void addFrame(){
-
-    }
-
-    protected void addEngine(){
-
+        System.out.println("Adding a small frame");
     }
 
     protected void addAccessories(){
-        
+        accessories.add(Accessories.FLOOR_MATTS);
+        accessories.add(Accessories.PHONE_CHARGER);
     }
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * 
  * @author Jack Hyatt
  */
-public class Car{
+public abstract class Car{
     private String make;
     private String model;
     protected ArrayList<Accessories> accessories;
@@ -17,33 +17,38 @@ public class Car{
     public Car(String make, String model){
         this.make = make;
         this.model = model;
+        this.accessories = new ArrayList<Accessories>();
     }
 
     public void assemble(){
-
+        addFrame();
+        addWheels();
+        addEngine();
+        addWindows();
+        addAccessories();
+        displayAccessories();
     }
 
-    protected void addFrame(){
-
-    }
+    protected abstract void addFrame();
 
     protected void addWheels(){
-
+        System.out.println("Adding the Wheels");
     }
 
     protected void addEngine(){
-
+        System.out.println("Adding a Standard Engine");
     }
 
     protected void addWindows(){
-
+        System.out.println("Adding Windows");
     }
 
-    protected void addAccessories(){
-
-    }
+    protected abstract void addAccessories();
 
     protected void displayAccessories(){
-
+        System.out.println("Accessories:");
+        for(Accessories i : accessories){
+            System.out.println("- " + i);
+        }
     }
 }
