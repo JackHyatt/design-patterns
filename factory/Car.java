@@ -21,6 +21,7 @@ public abstract class Car{
     }
 
     public void assemble(){
+        System.out.println("Creating a " + make + " " + model);
         addFrame();
         addWheels();
         addEngine();
