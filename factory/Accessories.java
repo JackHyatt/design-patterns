@@ -1,3 +1,7 @@
+/**
+ * Enums for what can be put into a car
+ * @author Jack Hyatt
+ */
 public enum Accessories{
     SPORTS_SEATS,
     WINDOW_TINT,
